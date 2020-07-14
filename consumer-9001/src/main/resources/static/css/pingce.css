@@ -1,0 +1,95 @@
+/*头部开始*/
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+.nav{
+	height: 38px;
+	background-color: #CA5A34;
+}
+.nav a{
+	text-decoration: none;
+	color: #fff;
+	line-height:38px;
+	padding: 0 15px;
+}
+
+
+
+
+/*头部结束*/
+
+
+/*主体开始*/
+
+
+/*主体结束*/
+
+
+/*底部开始*/
+
+.firstline{
+	padding-top: 50px;
+}
+
+/*底部结束*/
+
+.main{
+	width: 1200px;
+	margin: 0 auto;
+	min-height:500px;
+	position: relative;
+}
+
+.path{
+	height: 30px;
+	border-bottom: solid 1px #EEEEEE;
+	line-height: 30px;
+	color: #333;
+}
+
+.leftnav{
+	width: 222px;
+	min-height: 200px;
+	padding-top: 10px;
+	float: left;
+}
+
+.rightlist{
+	width:940px;
+	min-height:200px;
+	border: solid 1px #eee;
+	padding: 10px;
+	float: left;
+	margin-left: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.leftnav a{
+	display: block;
+	text-decoration: none;
+	color: #333;
+	height: 36px;
+	line-height: 36px;
+	border: solid 1px #eee;
+	border-top:0;
+	padding-left: 10px;
+}
+
+.rightlist h2{
+	text-align: center;
+	line-height: 50px;
+}
+
+.rightlist p.info{
+	text-align: center;
+	line-height: 30px;
+}
+
+.contents p{
+	text-indent: 2em;
+	line-height: 28px;
+}

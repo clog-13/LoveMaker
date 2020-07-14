@@ -1,0 +1,65 @@
+:root {
+	--box-border-color: #e2e2e2;
+}
+
+a:active,
+a:link,
+a:visited {
+	color: #778087;
+	text-decoration: none;
+	word-break: break-word
+}
+
+
+
+#Rightbar {
+	width: 270px;
+	height: 170px;
+	float: left;
+
+}
+
+
+
+
+
+.box {
+	background-color: var(--box-background-color);
+	border-radius: var(--box-border-radius);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+	border-bottom: 1px solid #e2e2e2
+}
+
+.super.button {
+	background-image: url(/static/img/bg_blended_light.png);
+	padding: 4px 8px;
+	border: 1px solid rgba(80, 80, 90, .2);
+	border-bottom-color: rgba(80, 80, 90, .35);
+	border-radius: 3px;
+	font-size: 14px;
+	outline: 0
+}
+
+.normal.button {
+	background-color: #fff;
+	color: #333;
+	text-shadow: 0 1px 0 #fff;
+	text-decoration: none;
+	font-weight: 700;
+	box-shadow: 0 1px 0 rgba(66, 66, 77, .1)
+}
+
+.inner {
+	padding: 10px;
+	font-size: 14px;
+	line-height: 150%;
+	text-align: left
+}
+
+
+
+
+a:hover {
+	color: #4d5256;
+	text-decoration: underline
+}

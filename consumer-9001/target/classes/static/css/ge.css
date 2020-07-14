@@ -1,0 +1,35 @@
+/*.{*/
+	/*padding: 0;*/
+	/*margin: 0;*/
+/*}*/
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.yemiantou{
+	height: 30px;
+	position: fixed;
+	background-color: #333333;
+	width: 100%;
+}
+.toubu{
+	height: 80px;
+	width: 100%;
+	background-color: #0099FF;
+}
+.toubux{
+	margin-top: 30px;
+	width: 100%;
+}
+.zhuti{
+	margin:0 auto;
+}
+.zhutifudong{
+	margin-left: 50px;
+}
+.weiba{
+	background-color: #333333;
+	height: 80px;
+	width: 100%;
+}

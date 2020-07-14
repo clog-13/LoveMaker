@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<title>首页02</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/head.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/stylex.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/slide2.css" />
+
+	<link rel="stylesheet" type="text/css" href="/static/css/bd.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/slide.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/photoshow.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/rightnav.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/zhuce.css" />
+
+	<script type="text/javascript" src="/static/js/jquery.js"></script>
+	<script type="text/javascript" src="/static/js/photorevealer.js"></script>
+</head>
+
+<body>
+<header class="header">
+	<div class="container clearfix">
+		<div class="fr nav">
+			<ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+				<li class="navbar_nav">
+					<a href="/" style="height: 50px;"><img src="/static/img/logo.png" height="50" width="133" /></a>
+				</li>
+				<li class="active">
+					<a href="/">首页</a>
+				</li>
+				<li class="dropdown">
+					<a href="/">参数</a>
+					<div class="dropdown_menu">
+						<a href="/">参数</a>
+						<a href="/">参数</a>
+						<a href="/">参数</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<a href="/">问答</a>
+					<div class="dropdown_menu">
+						<a href="/">论坛</a>
+						<a href="/">论坛</a>
+						<a href="/">论坛</a>
+					</div>
+				</li>
+				<li>
+					<a href="/">图片</a>
+				</li>
+				<li>
+					<a href="/">点评</a>
+				</li>
+				<li>
+					<a href="/add">评测</a>
+				</li>
+				<li>
+					<a href="/register">注册</a>
+				</li>
+				<li>
+					<!--							<a href="/login" th:href="${session.loginUser!=null}?'/':'/login'"  th:text="${session.loginUser!=null}?${session.loginUser}:'登录'">登录</a>-->
+					<a th:href="${session.loginUser!=null}?'/':'/login'"  th:text="${session.loginUser!=null}?${session.loginUser}:'登录'">登录</a>
+				</li>
+				<!--						<li>-->
+				<!--							<a href="/" style="color: white" th:text="${session!=null}?${session.loginUser}:''"></a>-->
+				<!--						</li>-->
+			</ul>
+		</div>
+
+		<!--				<div style="float: left;margin-left: 30px;">-->
+		<!--					<div class="site-header">-->
+		<!--						<div class="header-search">-->
+		<!--							<form id="J_searchForm" class="search-form clearfix" action="#&lt;!&ndash;首页&ndash;&gt;" method="get">-->
+		<!--								<input class="search-text" type="search" id="search" name="keyword" autocomplete="off" data-search-config="{'defaultWords':[]}" />-->
+		<!--								<input type="submit" class="search-btn iconfont" value="查找">-->
+		<!--&lt;!&ndash;								<input class="search-text" type="image" src="/static/img/search.png" onClick="document.formName.submit()">&ndash;&gt;-->
+		<!--							</form>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--				<div style="float: right;margin-right: 60px;">-->
+		<!--					<div class="site-header">-->
+		<!--						<a style="color: white" th:text="${session!=null}?${session.loginUser}:'登录'">登录</a>-->
+		<!--					</div>-->
+		<!--				</div>-->
+
+
+		<div style="float: right;margin-right: 60px;">
+			<div class="site-header">
+				<div class="header-search">
+					<form id="J_searchForm" class="search-form clearfix" action="#<!--首页-->" method="get">
+						<input class="search-text" type="search" id="search" name="keyword" autocomplete="off" data-search-config="{'defaultWords':[]}" />
+						<input type="submit" class="search-btn iconfont" value="&#xe616;" />
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</header>
+
+<div class="main1" style="margin: 0;">
+	<div class="box2">
+		<div class="pptbox" id="ppt01">
+			<ul class="innerwrapper">
+				<li>
+					<a href="/"><img src="/static/img/alpha1.jpeg" style="width:100%;height:100%;" /></a>
+				</li>
+				<li>
+					<a href="/"><img src="/static/img/alpha.jpeg" style="width:100%;height:100%;" /></a>
+				</li>
+				<li>
+					<a href="/"><img src="/static/img/alph2.jpeg" style="width:100%;height:100%;" /></a>
+				</li>
+			</ul>
+			<ul class="controls">
+				<li class="current">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<span class="btnleft"></span>
+			<span class="btnright"></span>
+		</div>
+	</div>
+
+	<div class="boxright">
+		<ul class="box3">
+			<a href="/"><img src="/static/img/fb.jpeg"/></a>
+		</ul>
+		<ul class="box3 ">
+			<a href="/"><img src="/static/img/fd.jpeg "/></a>
+		</ul>
+		<ul class="box3">
+			<a href="/"><img src="/static/img/fc.jpeg"/></a>
+		</ul>
+		<ul class="box3 ">
+			<a href="/"><img src="/static/img/fa.jpeg "/></a>
+		</ul>
+	</div>
+</div>
+
+<div class="main2">
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy1.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">vivo X30系列视频曝光，挖孔屏+潜望式超远摄</h3>
+				<p align="left" text="2019-10-02"></p>
+			</a>
+		</ul>
+	</div>
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy2.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">金色一加7T曝光，这是你买不到的手机</h3>
+				<p align="left" text="2019-10-03"></p>
+			</a>
+		</ul>
+	</div>
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy3.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">三星Galaxy S11+渲染图曝光，摄像头逼疯强迫症？</h3>
+				<p align="left" text="">2019-10-04</p>
+			</a>
+		</ul>
+	</div>
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy4.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">荣耀 V30 系列正式发布：3299元起，买不买</h3>
+				<p align="left" text="">2019-10-04</p>
+			</a>
+		</ul>
+	</div>
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy5.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">三星 Galaxy S11+ 相机以及价格曝光</h3>
+				<p align="left" text="">2019-10-05</p>
+			</a>
+		</ul>
+	</div>
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy6.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">vivo X30 系列来了：潜望式超远摄+5G 双模</h3>
+				<p align="left" text="">2019-10-12</p>
+			</a>
+		</ul>
+	</div>
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy7.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">小米Redmi Note 8 Pro海洋蓝</h3>
+				<p align="left" text="">2019-10-12</p>
+			</a>
+		</ul>
+	</div>
+	<div class="box5">
+		<div class="box5t">
+			<img src="/static/img/sy8.jpeg">
+		</div>
+		<ul class="box5n">
+			<a href="/art/get/1" target="_blank">
+				<span>世界新闻</span>
+				<h3 text="">表现强劲，AirPods 出货量暴增！</h3>
+				<p align="left" text="">2019-10-13</p>
+			</a>
+		</ul>
+	</div>
+</div>
+
+<!--<div class="main3">-->
+<!--	<div class="main3_2">-->
+<!--		<span style="font-size:25px;font-weight:600;color: white;letter-spacing: 6px;float: left;margin: 0.5rem auto;">行业峰会</span>-->
+<!--		<a href="/" class="showmore">查看更多</a>-->
+<!--	</div>-->
+<!--	<div class="main3_1">-->
+<!--		<div class="box4">-->
+<!--			<div class="box4t">-->
+<!--				<img src="/static/img/alpha.jpeg" />-->
+<!--			</div>-->
+<!--			<ul class="box4n">-->
+<!--				<a href="/" target="_blank">-->
+<!--					<h3>小米阿尔法强势来袭</h3>-->
+<!--					<p align="left">支持5G双卡全网通，其内存为12GB，内部存储则是采用了UFS 3.0颗粒，存储空间为512GB，电池则是采用了4050mAh的纳米硅负极电池，支持40W有线闪充</p>-->
+<!--				</a>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--		<div class="box4">-->
+<!--			<div class="box4t">-->
+<!--				<img src="/static/img/alpha.jpeg" />-->
+<!--			</div>-->
+<!--			<ul class="box4n">-->
+<!--				<a href="/" target="_blank">-->
+<!--					<h3>小米阿尔法强势来袭</h3>-->
+<!--					<p align="left">支持5G双卡全网通，其内存为12GB，内部存储则是采用了UFS 3.0颗粒，存储空间为512GB，电池则是采用了4050mAh的纳米硅负极电池，支持40W有线闪充</p>-->
+<!--				</a>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--		<div class="box4">-->
+<!--			<div class="box4t">-->
+<!--				<img src="/static/img/alpha.jpeg" />-->
+<!--			</div>-->
+<!--			<ul class="box4n">-->
+<!--				<a href="/" target="_blank">-->
+<!--					<h3>小米阿尔法强势来袭</h3>-->
+<!--					<p align="left">支持5G双卡全网通，其内存为12GB，内部存储则是采用了UFS 3.0颗粒，存储空间为512GB，电池则是采用了4050mAh的纳米硅负极电池，支持40W有线闪充</p>-->
+<!--				</a>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--		<div class="box4">-->
+<!--			<div class="box4t">-->
+<!--				<img src="/static/img/alpha.jpeg" />-->
+<!--			</div>-->
+<!--			<ul class="box4n">-->
+<!--				<a href="/" target="_blank">-->
+<!--					<h3>小米阿尔法强势来袭</h3>-->
+<!--					<p align="left">支持5G双卡全网通，其内存为12GB，内部存储则是采用了UFS 3.0颗粒，存储空间为512GB，电池则是采用了4050mAh的纳米硅负极电池，支持40W有线闪充</p>-->
+<!--				</a>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+
+<div class="main4">
+	<div class="main4_2">
+		<span style="font-size:25px;font-weight:600;color: #000000;letter-spacing: 6px;float: left;margin: 0.5rem auto;">手机测评</span>
+		<a href="/" class="showmore">查看更多</a>
+	</div>
+	<div class="main4_1">
+		<div class="box6" th:each="phone:${phones}">
+			<!--th:src="@{'/phone/getImg/'+${phone.id}}"-->
+			<a th:href="@{'/phone/get/'+${phone.id}}" target="_blank">
+				<div class="box6_1" th:text="${phone.name}"></div>
+				<div class="box6_2" th:text="${phone.listing_date}"></div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<p class="firstline">地址：重庆市巴南区龙洲湾街道尚文大道906号</p>
+	<p>联系方式：QQ群230921539</p>
+	<p>版权所有重庆工商大学融智学院18级惠软第二组</p>
+</div>
+
+<script src="/static/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/tyslide.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$("#ppt01").tyslide({
+		boxh: 600, //盒子的高度
+		w: 944, //盒子的宽度
+		h: 600, //图片的高度
+		isShow: true, //是否显示控制器
+		isShowBtn: true, //是否显示左右按钮
+		controltop: 15, //控制按钮上下偏移的位置,要将按钮向下移动   首先保证boxh 高度>图片 h
+		controlsW: 20, //控制按钮宽度
+		controlsH: 20, //控制按钮高度
+		radius: 100, //控制按钮圆角度数
+		controlsColor: "#ffffff", //普通控制按钮的颜色
+		controlsCurrentColor: "#333333" //当前控制按钮的颜色
+	});
+</script>
+
+</body>
+
+</html>

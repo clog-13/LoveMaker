@@ -1,0 +1,5 @@
+com/xiiv/springcloud/Mall8011_Application.class
+com/xiiv/springcloud/controller/CommodityController.class
+com/xiiv/springcloud/service/impl/CommodityServiceImpl.class
+com/xiiv/springcloud/service/CommodityService.class
+com/xiiv/springcloud/repository/CommodityRepository.class

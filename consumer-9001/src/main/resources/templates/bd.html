@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>评测</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/bd.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/head.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/slide.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/photoshow.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/rightnav.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/zhuce.css" />
+
+		<script type="text/javascript" src="/static/js/jquery.js"></script>
+		<script type="text/javascript" src="/static/js/photorevealer.js"></script>
+
+		<style type="text/css">
+			div{
+				width:100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container clearfix">
+				<div class="fr nav">
+					<ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+						<li class="navbar_nav">
+							<a href="#" style="height: 50px;"><img src="/static/img/logo.png" height="50" width="133" /></a>
+						</li>
+						<li class="active">
+							<a href="/">首页</a>
+						</li>
+						<li class="dropdown">
+							<a href="#">参数</a>
+							<div class="dropdown_menu">
+								<a href="#">参数</a>
+								<a href="#">参数</a>
+								<a href="#">参数</a>
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#">问答</a>
+							<div class="dropdown_menu">
+								<a href="#">论坛</a>
+								<a href="#">论坛</a>
+								<a href="#">论坛</a>
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#">图片</a>
+							  <div class="dropdown_menu">
+							  	<a href="#">背景图</a>
+							  	<a href="#">渲染图</a>
+							  </div>
+						</li>
+						<li>
+							<a href="#">点评</a>
+						</li>
+						<li>
+							<a href="s">评测</a>
+						</li>
+						<li>
+							<a href="/" style="color: white" th:text="${session!=null}?${session.loginUser}:''"></a>
+						</li>
+					</ul>
+				</div>
+
+<!--				<div style="float: right;margin-right: 60px;">-->
+<!--					<div class="site-header">-->
+<!--						<a style="color: white" th:text="${session!=null}?${session.loginUser}:'登录'">登录</a>-->
+<!--					</div>-->
+<!--				</div>-->
+
+<!--				<div style="float: right;margin-right: 60px;">-->
+<!--					<div class="site-header">-->
+<!--						<div class="header-search">-->
+<!--							<form id="J_searchForm" class="search-form clearfix" action="#&lt;!&ndash;首页&ndash;&gt;" method="get">-->
+<!--								<input class="search-text" type="search" id="search" name="keyword" autocomplete="off" data-search-config="{'defaultWords':[]}" />-->
+<!--								<input type="submit" class="search-btn iconfont" value="&#xe616;" />-->
+<!--							</form>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+
+			</div>
+		</header>
+		<p class="path" style="margin-top: 50px;">当前位置:手机信息>手机参数详情 </p>
+		<a href="#" style="margin-left: 30px;"><img src="/static/img/logo.jpg" height="200" width="500" /></a>
+		<div class="main001">
+
+			<div class="prolist">
+				<div class="proitembox1" style="position:relative;top: 75px;">
+					<img th:src="@{'/phone/getImg/'+${phone.id}}" width="100%" height="100%" />
+				</div>
+				<div class="proitembox2" style="background-color: white;display: inline-block;position:relative;top:40px;margin-left: 20px;">
+					<table class="cs" border="0" style="width:767px">
+						<caption align="center">
+							<h2>基础参数</h2>
+						</caption>
+						<tr>
+							<th>手机品牌:</th>
+							<td>[[${phone.name}]]</td>
+						</tr>
+						<tr>
+							<th>运行内存:</th>
+							<td>[[${phone.ram}]]</td>
+						</tr>
+						<tr>
+							<th>存储空间:</th>
+							<td>[[${phone.memory}]]</td>
+						</tr>
+						<tr>
+							<th>摄像头:</th>
+							<td>[[${phone.camera}]]</td>
+						</tr>
+						<tr>
+							<th>电池容量</th>
+							<td>[[${phone.battery}]]</td>
+						</tr>
+						<tr>
+							<th>屏幕尺寸</th>
+							<td>[[${phone.screen_size}]]</td>
+						</tr>
+						<tr>
+							<th>屏幕分辨率</th>
+							<td>[[${phone.resolution}]]</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="page-wrap" style="width: 1000px;">
+				<div class="rightnav" style="position: absolute;margin-left: 1120px;margin-top: 20px;">
+					<a style="border-top: solid 1px #eee;background-color: #7e7e7e;hover:none;">热门排行</a>
+					<a th:each="pho:${phones}"  th:href="@{'/phone/get/'+${pho.id}}" th:text="${pho.name}" target="_blank"></a>
+
+					<!--					<a href="#">1.一加7T</a>-->
+<!--					<a href="#">2.小米CC9&nbsp;Pro</a>-->
+<!--					<a href="#">3.OPPO&nbsp;Reno2</a>-->
+<!--					<a href="#">4.锤子科技坚果Pro&nbsp;3</a>-->
+<!--					<a href="#">5.OPPO&nbsp;Reno&nbsp;Ace</a>-->
+<!--					<a href="#">6.realme X2 Pro</a>-->
+<!--					<a href="#">7.努比亚红魔3S</a>-->
+<!--					<a href="#">8.realme X2 Pro大师版</a>-->
+
+				</div>
+
+				<table>
+					<tr>
+						<td>
+							<div class="photo_slider">
+								<img src="/static/img/true.jpg" />
+								<div class="info_area">
+									<h3>正面图1</a></h3>
+								</div>
+							</div>
+						</td>
+
+						<td>
+							<div class="photo_slider">
+								<img src="/static/img/true2.jpg" />
+								<div class="info_area">
+									<h3>正面图2</h3>
+								</div>
+							</div>
+						</td>
+
+						<td>
+							<div class="photo_slider">
+								<img src="/static/img/true3.jpg" />
+								<div class="info_area">
+									<h3>背面图</h3>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="photo_slider">
+								<img src="/static/img/true4.jpg" />
+								<div class="info_area">
+									<h3>侧面图</h3>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="ppt" style="margin-top: 20px;">
+				<div class="pptbox" id="ppt01">
+					<ul class="innerwrapper">
+						<li>
+							<a href="#"><img src="/static/img/01.png" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/static/img/02.png" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/static/img/03.png" /></a>
+						</li>
+					</ul>
+					<ul class="controls">
+						<li class="current">1</li>
+						<li>2</li>
+						<li>3</li>
+					</ul>
+					<span class="btnleft" style="color: #333333;"></span>
+					<span class="btnright"></span>
+				</div>
+			</div>
+			<div class="detailed-parameters">
+				<div id="paramSideNav" class="param-nav">
+					<div class="param-nav-box"></div>
+				</div>
+
+				<h2>详细参数</h2>
+				<table>
+					<tr>
+						<td class="hd2" colspan="2" name="s-0">
+							<h4><span style="color: #CCCCCC;">基本参数</span></h4></td>
+					</tr>
+					<tr>
+						<th>官方价格</th>
+						<td>[[${phone.prices}]]</td>
+					</tr>
+					<tr>
+						<th>上市日期</th>
+						<td>[[${phone.listing_date}]]</td>
+					</tr>
+
+					<tr>
+						<th>屏幕类型</th>
+						<td>[[${phone.screen_type}]]</td>
+					</tr>
+
+					<tr>
+						<th>操作系统</th>
+						<td>[[${phone.os}]]</td>
+					</tr>
+					<tr>
+						<th>CPU型号</th>
+						</th>
+						<td>[[${phone.cpu}]]</td>
+					</tr>
+					<tr>
+						<th>机身颜色</th>
+						<td>[[${phone.color}]]</td>
+					</tr>
+				</table>
+
+				<table>
+					<tr>
+						<td class="hd2" colspan="2" name="s-0">
+							<h4><span style="color: #CCCCCC;">屏幕</span></h4></td>
+					</tr>
+					<tr>
+						<th>主屏尺寸</th>
+						<td>[[${phone.screen_size}]]</td>
+					</tr>
+					<tr>
+						<th>主屏材质</th>
+						<td>[[${phone.screen_type}]]</td>
+					</tr>
+					<tr>
+						<th>主屏分辨率</th>
+						<td>[[${phone.resolution}]]</td>
+					</tr>
+					<tr>
+						<th>屏幕像素密度</th>
+						<td>[[${phone.screen_pixel}]]</td>
+					</tr>
+				</table>
+
+				<table>
+					<tr>
+						<td class="hd2" colspan="2" name="s-0">
+							<h4><span style="color: #CCCCCC;">硬件</span></h4></td>
+					</tr>
+					<tr>
+						<th>CPU频率</th>
+						<td>[[${phone.cpu_fre}]]</td>
+					</tr>
+					<tr>
+						<th>核心数</th>
+						<td>[[${phone.core_num}]]</td>
+					</tr>
+					<tr>
+						<th>GPU型号</th>
+						<td>[[${phone.gpu}]]</td>
+					</tr>
+					<tr>
+						<th>RAM容量</th>
+						<td>[[${phone.ram_size}]]</td>
+					</tr>
+					<tr>
+						<th>ROM容量</th>
+						<td>[[${phone.rom_size}]]</td>
+					</tr>
+					<tr>
+						<th>电池容量</th>
+						<td>[[${phone.battery}]]</td>
+					</tr>
+					<tr>
+						<th>充电功率</th>
+						<td>[[${phone.charging}]]</td>
+					</tr>
+				</table>
+
+				<!--网络与连接部分-->
+				<table>
+					<tr>
+						<td class="hd2" colspan="2" name="s-0">
+							<h4><span style="color: #CCCCCC;">网络与连接</span></h4></td>
+					</tr>
+					<tr>
+						<th>4G网络</th>
+						<td>[[${phone.four_g}]]</td>
+					</tr>
+					<tr>
+						<th>3G网络</th>
+						<td>[[${phone.three_g}]]</td>
+					</tr>
+					<tr>
+						<th>支持频段</th>
+						<td>[[${phone.fre_band}]]</td>
+					</tr>
+					<tr>
+						<th>蓝牙</th>
+						<td>[[${phone.bluetooth}]]</td>
+					</tr>
+					<tr>
+						<th>机身接口</th>
+						<td>[[${phone.port}]]</td>
+					</tr>
+				</table>
+
+				<table>
+					<tr>
+						<td class="hd2" colspan="2" name="s-0">
+							<h4><span style="color: #CCCCCC;">摄像头</span></h4></td>
+					</tr>
+
+					<tr>
+						<th>后置摄像头</th>
+						<td>[[${phone.post_camera}]]</td>
+					</tr>
+					<tr>
+						<th>前置摄像头</th>
+						<td>[[${phone.front_camera}]]</td>
+					</tr>
+					<tr>
+						<th>传感器类型</th>
+						<td>[[${phone.sensor_type}]]</td>
+					</tr>
+					<tr>
+						<th>传感器型号</th>
+						<td>[[${phone.sensor_model}]]</td>
+					</tr>
+
+				</table>
+
+				<!--外观部分-->
+				<table>
+					<tr>
+						<td class="hd2" colspan="2" name="s-0">
+							<h4><span style="color: #CCCCCC;">外观</span></h4></td>
+					</tr>
+
+					<tr>
+						<th>手机尺寸</th>
+						<td>[[${phone.size}]]</td>
+					</tr>
+
+					<tr>
+						<th>手机重量</th>
+						<td>[[${phone.weight}]]</td>
+					<tr>
+					<tr>
+						<th>机身材质</th>
+						<td>[[${phone.texture}]]</td>
+					</tr>
+				</table>
+
+				<h2>用户评论</h2>
+			</div>
+
+			<form id="addpicinfo"  enctype="multipart/form-data" cellpadding="0" cellspacing="0" border="0" width="100%" style="padding: 10px;font-size: 14px;line-height: 120%;text-align: left;border-bottom: 1px solid var(--box-border-color)">
+				<textarea valign="top" align="right" name="text" id="text" rows="3" cols="120">
+				</textarea>
+				<input valign="top" align="left" type="button" id="idsub" value="提交" style="height: 40px;width: 40px;"/>
+			</form>
+
+
+			<table th:each="comment:${comments}" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 10px;padding: 10px;font-size: 14px;line-height: 120%;text-align: left;border-bottom: 1px solid var(--box-border-color)">
+				<tr>
+					<td width="48" valign="top" align="center"><img height="50px" width="100%" src="/static/img/444.jpg" class="avatar" border="0" align="default" /></td>
+					<td width="10" valign="top"></td>
+					<td width="auto" valign="top" align="left">
+<!--						<div class="fr"> &nbsp; &nbsp; <span class="no">[[${comment.id}]]</span></div>-->
+						<div class="fr"> &nbsp; &nbsp; <span class="no"></span></div>
+						<div class="sep3"></div>
+						<strong><a href="" class="dark">[[${comment.author}]]</a></strong>&nbsp; &nbsp;<span class="ago">[[${comment.time}]]</span>
+						<div class="sep5"></div>
+						<div class="reply_content">[[${comment.text}]]</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		</div>
+		<div class="footer">
+			<p class="firstline">地址：重庆市巴南区龙洲湾街道尚文大道906号</p>
+			<p>联系方式：QQ群230921539</p>
+			<p>版权所有©重庆工商大学融智学院18级惠软第二组</p>
+		</div>
+
+		<script src="/static/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/tyslide.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#ppt01").tyslide({
+				boxh: 450, //盒子的高度
+				w: 1100, //盒子的宽度
+				h: 450, //图片的高度
+				isShow: true, //是否显示控制器
+				isShowBtn: true, //是否显示左右按钮
+				controltop: 15, //控制按钮上下偏移的位置,要将按钮向下移动   首先保证boxh 高度>图片 h
+				controlsW: 20, //控制按钮宽度
+				controlsH: 20, //控制按钮高度
+				radius: 100, //控制按钮圆角度数
+				controlsColor: "#ffffff", //普通控制按钮的颜色
+				controlsCurrentColor: "#333333" //当前控制按钮的颜色
+			});
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="http://cdn.clouddeep.cn/amazeui/1.0.1/js/amazeui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js" integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function () {
+				$("#idsub").click(function(){
+					/*用ajaxSubmit方法提交表单*/
+					//ajaxSubmit 提交表单 需要jquery.form.js
+					$("#addpicinfo").ajaxSubmit({
+						type : 'post',
+						url : "/phocom/add/",
+						async: true,
+						error : function() {
+							alert("添加失败");
+						},
+						success : function(data) {
+							window.location.href="/phone/get/"+data;
+						}
+					});
+				})
+			});
+		</script>
+	</body>
+</html>

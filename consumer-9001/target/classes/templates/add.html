@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>搞机网————信息发布中心</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+	<link rel="stylesheet" href="/static/css/head.css" type="text/css" />
+	<link rel="stylesheet" href="/static/css/rightnav.css" type="text/css"/>
+
+	<body>
+		<header class="header">
+			<div class="container clearfix">
+				<div class="fr nav">
+					<ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+						<li class="navbar_nav">
+							<a href="#" style="height: 50px;"><img src="/static/img/logo.png" height="50" width="133" /></a>
+						</li>
+						<li class="active">
+							<a href="/">首页</a>
+						</li>
+						<li class="dropdown">
+							<a href="#">参数</a>
+							<div class="dropdown_menu">
+								<a href="#">参数</a>
+								<a href="#">参数</a>
+								<a href="#">参数</a>
+							</div>
+						</li>
+						<li class="dropdown">
+							<a href="#">问答</a>
+							<div class="dropdown_menu">
+								<a href="#">论坛</a>
+								<a href="#">论坛</a>
+								<a href="#">论坛</a>
+							</div>
+						</li>
+						<li>
+							<a href="#">图片</a>
+						</li>
+						<li>
+							<a href="#">点评</a>
+						</li>
+						<li>
+							<a href="/add">评测</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="fistW" style="vertical-align:middle;"><img src="/static/img/logo.png" style="height: 80px;float: left;" /><h1 style="margin-top: 20px;">搞机网信息发布平台</h1></div>
+
+		<div class="bigboxW">
+			<div class="zuoboxW">
+				<div class="dongW">
+					<div class="rightnav" style="position: absolute;">
+						<a style="border-top: solid 1px #eee;background-color: #7e7e7e;hover:none;">导航</a>
+						<a herf="###">首页</a>
+						<a href="#shoujijicuxinxi">基础参数</a>
+						<a href="#jibencanshu">基本信息</a>
+						<a href="#pingmuxinxi">屏幕</a>
+						<a href="#yinjian">硬件</a>
+						<a href="#wangluo">网络与连接</a>
+						<a href="#yinjian">摄像头</a>
+						<a href="#waiguan">外观</a>
+<!--						<a href="###">信息网页</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="juzhongheziW">
+			<form id="addpicinfo"  enctype="multipart/form-data">
+<!--			<form id="addpicinfo"  enctype="multipart/form-data" action="/phone/add" method="post">-->
+				<input type="hidden" name="biao" id="biao" value="100" />
+				<div class="shoujijicuxinxiW" id="shoujijicuxinxi">
+					<h3>基&nbsp;&nbsp;础&nbsp;&nbsp;参&nbsp;&nbsp;数</h3>
+					<div class="zhongW">
+						<p>手&nbsp;机&nbsp;名&nbsp;称&nbsp;&nbsp;:<input type="text" name="name" id="name"/></p>
+						<p>官&nbsp;方&nbsp;价&nbsp;格&nbsp;&nbsp:<input type="text" name="prices" id="prices"/></p>
+						<p>上&nbsp;市&nbsp;时&nbsp;间&nbsp;&nbsp;:<input type="text" name="listing_date" id="listing_date"/></p>
+						<p>图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片&nbsp;&nbsp;:
+<!--							<div class="tpl-logo">-->
+								<img id="logo" src="" width="200px" height="200px" alt="">
+<!--							</div>-->
+						</p>
+						<p><input id="photo" type="file" name="fileField"></p>
+						<hr />
+					</div>
+				</div>
+				<div class="jibencanshuW" id="jibencanshu">
+					<h3>基&nbsp;&nbsp;本&nbsp;&nbsp;信&nbsp;&nbsp;息</h3>
+					<div class="zhongW">
+						<p>手机存储大小:<input type="text" name="memory" id="memory" /></p>
+						<p>运&nbsp;行&nbsp;内&nbsp;存&nbsp;&nbsp;:<input type="text" name="ram" id="ram" /></p>
+						<p>操&nbsp;作&nbsp;系&nbsp;统&nbsp;&nbsp;:<input type="text" name="os" id="os" /></p>
+						<p>C&nbsp;P&nbsp;U&nbsp;型号&nbsp;&nbsp;:<input type="text" name="cpu" id="cpu" /></p>
+						<p>C&nbsp;P&nbsp;U&nbsp;频率&nbsp;&nbsp;:<input type="text" name="cpu_fre" id="cpu_fre" /></p>
+						<p>核&nbsp;&nbsp;&nbsp;心&nbsp;&nbsp;&nbsp;数&nbsp;&nbsp;:<input type="text" name="core_num" id="core_num" /></p>
+						<p>G&nbsp;P&nbsp;U&nbsp;型号&nbsp;&nbsp;:<input type="text" name="gpu" id="gpu" /></p>
+						<p>传感器&nbsp;类型&nbsp;&nbsp;:<input type="text" name="sensor_type" id="sensor_type" /></p>
+						<p>传感器&nbsp;型号&nbsp;&nbsp;:<input type="text" name="sensor_model" id="sensor_model" /></p>
+						<p>ram&nbsp;容量&nbsp;&nbsp;:<input type="text" name="ram_size" id="ram_size" /></p>
+						<p>rom&nbsp;容量&nbsp;&nbsp;:<input type="text" name="rom_size" id="rom_size" /></p>
+						<hr />
+					</div>
+				</div>
+				<div class="pingmuxinxiW" id="pingmuxinxi">
+					<h3>屏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;幕</h3>
+					<div class="zhongW">
+						<p>屏&nbsp;幕&nbsp;尺&nbsp;寸&nbsp;&nbsp;:<input type="text" name="screen_size" id="screen_size" /></p>
+						<p>屏&nbsp;幕&nbsp;分&nbsp;辨&nbsp;率&nbsp;:<input type="text" name="resolution" id="resolution"/></p>
+						<p>屏幕像素密度:<input type="text" name="screen_pixel" id="screen_pixel" /></p>
+						<p>屏&nbsp;幕&nbsp;类&nbsp;型&nbsp;&nbsp;:<input type="text" name="screen_type" id="screen_type" /></p>
+						<hr />
+					</div>
+				</div>
+				<div class="yinjianW" id="yinjian">
+					<h3>硬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;件</h3>
+					<div class="zhongW">
+						<p>电&nbsp;池&nbsp;容&nbsp;量&nbsp;&nbsp;:<input type="text" name="battery" id="battery" /></p>
+						<p>充&nbsp;电&nbsp;功&nbsp;率&nbsp;&nbsp;:<input type="text" name="charging" id="charging" /></p>
+						<p>接&nbsp;口&nbsp;类&nbsp;型&nbsp;&nbsp;:<input type="text" name="port" id="port" /></p>
+						<hr />
+					</div>
+				</div>
+				<div class="wangluoW" id="wangluo">
+					<h3>网&nbsp;络&nbsp;与&nbsp;连&nbsp;接</h3>
+					<div class="zhongW">
+						<p>4&nbsp;&nbsp;G&nbsp;网&nbsp;络&nbsp;&nbsp;:<input type="text" name="four_g" id="four_g"/></p>
+						<p>3&nbsp;&nbsp;G&nbsp;网&nbsp;络&nbsp;&nbsp;:<input type="text" name="three_g" id="three_g"/></p>
+						<p>支&nbsp;&nbsp;持&nbsp;频&nbsp;段&nbsp;&nbsp;:<input type="text" name="fre_band" id="fre_band"/></p>
+						<p>蓝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牙&nbsp;&nbsp;:<input type="text" name="bluetooth" id="bluetooth"/></p>
+						<hr />
+					</div>
+				</div>
+				<div class="shexiangtouW" id="shexiangtou">
+					<h3>摄&nbsp;&nbsp;&nbsp;&nbsp;像&nbsp;&nbsp;&nbsp;&nbsp;头</h3>
+					<div class="zhongW">
+						<p>摄&nbsp;&nbsp;&nbsp;像&nbsp;&nbsp;&nbsp;头&nbsp;&nbsp;:<input type="text" name="camera" id="camera"/></p>
+						<p>后&nbsp;置&nbsp;像&nbsp;素&nbsp;&nbsp;:<input type="text" name="post_camera" id="post_camera"/></p>
+						<p>前&nbsp;置&nbsp;像&nbsp;素&nbsp;&nbsp;:<input type="text" name="front_camera" id="front_camera"/></p>
+						<hr />
+					</div>
+				</div>
+				<div class="waiguanW" id="waiguan">
+					<h3>外&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;观</h3>
+					<div class="zhongW">
+						<p>机&nbsp;身&nbsp;颜&nbsp;色&nbsp;&nbsp;:<input type="text" name="color" id="color"/></p>
+						<p>手&nbsp;机&nbsp;尺&nbsp;寸&nbsp;&nbsp;:<input type="text" name="size" id="size"/></p>
+						<p>手&nbsp;机&nbsp;重&nbsp;量&nbsp;&nbsp;:<input type="text" name="weight" id="weight"/></p>
+						<p>机&nbsp;身&nbsp;材&nbsp;质&nbsp;&nbsp;:<input type="text" name="texture" id="texture"/></p>
+						<hr />
+					</div>
+
+					<p><input type="button" id="idsub" value="提交" style="margin-left: 270px; height: 30px;width: 35px; background-color: aqua;"/></p>
+					<!--<input type="button" id="idsub" value="提交" style="margin-left: 270px; height: 30px;width: 35px; background-color: aqua;"/>-->
+				</div>
+			</form>
+		</div>
+
+		<div class="footer">
+			<p class="firstline">地址：重庆市巴南区龙洲湾街道尚文大道906号</p>
+			<p>联系方式：QQ群230921539</p>
+			<p>版权所有重庆工商大学融智学院18级惠软第二组</p>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="http://cdn.clouddeep.cn/amazeui/1.0.1/js/amazeui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js" integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function () {
+				$("#photo").change(function () {
+					var fil = this.files;
+					for (var i = 0; i < fil.length; i++) {
+						reads(fil[i]);
+					}
+				});
+
+				function reads(fil){
+					var reader = new FileReader();
+					reader.readAsDataURL(fil);
+					reader.onload = function(){
+						// document.getElementById("dd").innerHTML += "<img src='"+reader.result+"'>";
+						$("#logo").attr("src",reader.result)
+					}
+				}
+
+				$("#idsub").click(function(){
+					/*用ajaxSubmit方法提交表单*/
+					//ajaxSubmit 提交表单 需要jquery.form.js
+					$("#addpicinfo").ajaxSubmit({
+						type : 'post',
+						url : "/phone/add" ,
+						async: true,
+						error : function() {
+							alert("添加失败");
+						},
+						success : function(data) {
+							// alert(data);
+							top.location.href="/phone/get/"+data;
+						}
+					});
+				})
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: microservicecloud-dept                            # 微服务的对外名称
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    url: jdbc:mysql://localhost:3306/lovemaker?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  resources:
+    static-locations: classpath:/
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+    static-path-pattern: /**
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka,http://127.0.0.2:7001/eureka
+#      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+
+  instance:
+    instance-id: microservicecloud-dept8001
+    prefer-ip-address: true
+
+info:
+  app.name: xiiv-microservicecloud
+  company.name: www.xiiv.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
